@@ -17,8 +17,7 @@ gems:
 resume_avatar:                  "true"
 resume_name:                    "Haonan Wang"
 resume_title:                   "Computer Scientist"
-resume_contact_email:
-  "haonan3@illinois.edu"
+resume_contact_email:           "haonan3@illinois.edu"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
