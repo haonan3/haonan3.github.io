@@ -1,4 +1,10 @@
-### Compress (Mac)
+### Decompress
+
+```
+tar -zxvf backup.tar.gz 
+```
+
+### Compress
 ```
 tar -cxvf file.txt
 ```
@@ -6,18 +12,6 @@ tar -cxvf file.txt
 ### Compress (Linux)
 ```
 tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
-```
-
-### Decompress .tar.gz
-
-```
-tar -zxvf backup.tar.gz 
-```
-
-### Decompress .gz
-
-```
-gunzip backup.gz
 ```
 
 ### Find where a package is installed (Ubuntu)
@@ -150,28 +144,4 @@ $ watch --color -n1.0 gpustat --color -cu
 
 ```
 $ ln -s source destination
-```
-
-### Change timezone on Linux
-
-```
-$ sudo timedatectl set-timezone America/Chicago
-```
-
-### Check Tmux Version on Linux
-
-```
-$ tmux -V
-```
-
-### Run on GPU:1
-
-```
-$ CUDA_VISIBLE_DEVICES=1 python XXX
-```
-
-### Recursively download
-
-```
-$ wget -r -np -R "index.html*" http://example.com/configs/.vim/
 ```
