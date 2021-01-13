@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="wrapper">
+
+	  <link rel="stylesheet" href="{{ "/css/main_resume_cleaned.css" | prepend: site.baseurl }}">
+  
+      <!-- begin Experience -->
+      <section class="content-section" style="margin-top:30px;">
+
+        <header class="section-header">
+          <h2>Projects</h2>
+        </header>
+
+        <div class="executive-summary" style="font-size:17px;">
+          <p>I am currently working on the data-wrangling part of AceMap System. 
+             I used to work in various topics including Machine Learning & Data Mining Systems, Vehicle System and Website Constructions.           
+          </p>
+        </div>
+        
+        <!-- horizontal line -->
+        <div style="border-bottom: 1px solid #c7c7c7; margin-bottom: 1.5rem"></div>
+        
+        <!-- Accent Classification of English Speakers -->
+        <div class="resume-item">
+          <h3 class="resume-item-title">Accent Classification of English Speakers</h3>
+          <h4 class="resume-item-details">This work is advised by Prof. Kai Yu </h4>
+          
+          <p class="resume-item-copy">
+          In this project, I studied the accent classification problem that given a recording of one person speaking a known script of English words, how could we predict that speaker’s native language. 
+          I hacked this problem through four major steps — word segmentation, feature extraction, clip classification and recording classification. Using MFCCs as feature vectors and Logistic Regression as classification method, I build a system to achieve an overall accuracy of 97%.
+		  </p>
+          
+          <p class="resume-item-copy" style="margin-bottom:20px;"> This project is hosted on GitHub. [<a href="https://github.com/mickeystroller/Accent-Classification" target="_blank">Codes</a>] [<a href="/resources/ML_Project_Jiaming_Shen.pdf" target="_blank">PDF</a>]</p>
+          
+          <div align="center">
+          <table>
+          	<tbody>
+          		<tr>
+          			<td style="width:320px">
+          			<img src="/images/ML-1.jpg" style="display:block; margin-left:15px; width:340px">
+          			</td>
+          			
+          			<td style="width:480px">
+          			<img src="/images/ML-2.jpg" style="display:block; margin-left:15px; width:400px">
+          			</td>
+          		</tr>
+          	</tbody>
+          </table>
+          </div>
+                    
+         
+        </div><!-- end of resume-item -->
+ 
+ 		<!-- horizontal line -->
+        <div style="border-bottom: 1px solid #c7c7c7; margin-bottom: 1.5rem"></div>
+
+        <!-- PM2.5 Concentration prediction using time series based data mining -->
+		<div class="resume-item">
+          <h3 class="resume-item-title">PM2.5 Concentration prediction using time series based data mining</h3>
+          <h4 class="resume-item-details">This work is advised by Prof. Bo Yuan. </h4>
+          
+          <p class="resume-item-copy">
+          In this project, I discussed three models to deal with PM2.5 prediction problem, including basic Autoregressive Moving Average (ARMA) Model, Stochastic Volatility (SV) Model and Stock-Watson (SW) Model. 
+          Furthermore, I designed a new model combing SW Model with Time Series Neural Network and analyze its performance with above-mentioned models. Results show that this newly-designed model provide more accurate prediction of PM2.5 concentration levels for the next six hours.
+		  </p>
+          
+          <p class="resume-item-copy" style="margin-bottom:20px;">This project is hosted on GitHub. [<a href="/resources/DM_Project_Jiaming_Shen.pdf" target="_blank">PDF</a>][<a href="https://github.com/mickeystroller/PM2.5-prediction-using-time-series-data-mining" target="_blank">Tex Sources</a>].</p>
+          
+          <div align="center" style="margin-left:-15px;">
+          <table>
+          	<tbody>
+          		<tr>
+          			<td style="width:400px">
+          			<img src="/images/DM-1.jpg" style="display:block; margin-left:15px;">
+          			</td>
+          			          			
+          			<td style="width:360px">
+          			<img src="/images/DM-3.jpg" style="display:block; margin-left:15px;">
+          			</td>
+          		</tr>
+          	</tbody>
+          </table>
+          </div>
+        </div><!-- end of resume-item -->
+        
+        <!-- horizontal line -->
+        <div style="border-bottom: 1px solid #c7c7c7; margin-bottom: 1.5rem"></div>
+
+		<!-- CityDrive: A map-generating and Speed-Optimizing Driving System -->
+		<div class="resume-item">
+          <h3 class="resume-item-title">CityDrive: A map-generating and Speed-Optimizing Driving System</h3>
+          <h4 class="resume-item-details">This work is advised by Prof. Xinbing Wang</h4>
+		  <table>
+          	<tbody>
+          		<tr>
+          			<td>
+          			I designed a Traffic Signal Schedule Inference Model in CityDrive, a map-generating and speed-optimizing driving system. 
+          			Through the crowdsourcing records of green-pass and red-stop at traffic lights, the system dynamically constructs a city map and then provides speed suggestion to the drivers in order to avoid red-stops.
+          			I implemented this algorithm and conducted simulation in Matlab. Results shown that the continuous speed advisory service effectively smooths traffic flow and significantly reduces energy consumption. 
+          			</td>
+          			<td style="width:340px">
+          			<img src="/images/CityDrive.png" style="display:block; margin-left:15px;">
+          			</td>
+          		</tr>
+          	</tbody>
+          </table>
+          
+        </div><!-- end of resume-item -->
+	
+        <!-- horizontal line -->
+        <div style="border-bottom: 1px solid #c7c7c7; margin-bottom: 1.5rem"></div>
+		
+	    <div class="resume-item">
+          <h3 class="resume-item-title">Static Front-end Websites</h3>
+		  <p class="resume-item-copy">I designed and built several static web pages, using Bootstrap 3, Jekyll, plain HTML/CSS, pure JavaScript, Jquery, and joomla!. </p>
+		  <p class="resume-item-copy">Following are several selected websites:</p>
+		  <ul class="resume-item-list">
+		    <li><a href="http://202.120.39.158/" target="_blank">IEEE Honor Class Homepage</a></li>
+		    <li><a href="http://www.sjtu.edu.cn/president/pres_index.htm" target="_blank">Shanghai Jiao Tong University president home page (Chinese Version)</a></li>
+			<li><a href="http://smartbdn.sjtu.edu.cn/" target="_blank">Smart Big Data Network at IWCT in SJTU</a></li>
+			<li><a href="{{ site.baseurl }}/"" target="_blank">My own static homepage</a></li>
+			
+          </ul>
+        </div>
+        
+		
+
+	
+
+      </section>
+      <!-- end Experience -->
+
+
+    </div>
+	  {% include footer.html %}
+	
+		<!-- {% include disqus.html %} -->
+
+    {% include ga.html %}
+    
+
+  </body>
+
+</html>

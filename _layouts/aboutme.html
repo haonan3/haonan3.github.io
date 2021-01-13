@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="wrapper">
+
+	  <link rel="stylesheet" href="{{ "/css/main_resume_cleaned.css" | prepend: site.baseurl }}">
+  
+  
+      <header class="page-header">
+        <!-- You can turn off the avatar in _config.yml by setting to false -->
+        {% if site.resume_avatar == 'true' %}
+        <!-- <img src="images/me.jpg" alt="my photo" class="avatar" style="height: 132px;"> -->
+        {% endif %}
+
+        <!-- Your name is defined in the _config.yml file -->
+        <h1 class="header-name">{{ site.resume_name }}</h1>
+
+      </header>
+
+
+      <!-- begin My Research -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>My Research</h2>
+        </header>
+
+        <div class="executive-summary" style="font-size:17px;">
+          <p>The goal of my research is to <b>unleash hidden knowledge buried in unstructured text data</b> and enable them to be more <i>accessible</i>, <i>interpretable</i>, and <i>reusable</i>. Towards this goal, I propose a novel and generic data model, named <b>multi-faceted taxonomy</b>, which organizes concepts of different facets into hierarchical structures. My research consolidates the power of multi-faceted taxonomy in three areas of investigation: </p>
+          <ul>
+            <li> <b>Construction:</b> To identify important concepts and their taxonomic relations from text corpora, I propose a series of set expansion and topic/word hierarchy construction methods. </li>
+            <li> <b>Enrichment:</b> To keep existing taxonomies up-to-date in real-world applications, I study multiple tasks including synonym (set) discovery, taxonomy expansion, and taxonomy completion. </li>
+            <li> <b>Application:</b> To distill knowledge from multi-faceted taxonomies for downstream applications, I develop methods for weakly-supervised text classification and unsupervised literature search. </li>
+          </ul>
+          <!-- <p> <b>Construction:</b> To identify important concepts and their taxonomic relations from text corpora, I propose a series of set expansion and (either topic of word) hierarchy construction methods.</p>
+          <p> <b>Enrichment:</b> To keep existing taxonomies up-to-date in real-world applications, I study multiple tasks including synonym (set) discovery, taxonomy expansion, and taxonomy completion.</p>
+          <p> <b>Application:</b> To distill knowledge from multi-faceted taxonomies for knowledge-rich applications, I develop principled methods for weakly-supervised hierarchical text classification and unsupervised literature search.</p> -->
+        </div>
+
+      </section>
+      <!-- end My Research -->
+
+      <!-- begin Education -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Education</h2>
+        </header>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">University of Illinois at Urbana-Champaign ( UIUC ) </h3>
+          <h4 class="resume-item-details">Ph.D. Candidate in Computer Science  &bull; Aug. 2016 &mdash; Aug. 2021 (expected)</h4>
+          <ul class="resume-item-list">
+            <li> Overall GPA: 4.0/4.0 </li>
+            <li> Member of Data Mining Group. Supervised by Professor <b>Jiawei Han</b>. </li>
+            <li> Received <b>Brian Totty Graduate Fellowship</b> at Computer Science Department. </li>
+            <li> Received <b>Yunni & Maxine Pao Memorial Fellowship</b>. </li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Shanghai Jiao Tong University ( SJTU )</h3>
+          <h4 class="resume-item-details">B.S.E. in Computer Science and Technology  &bull; Sep. 2012 &mdash; Jun. 2016</h4>
+		      <ul class="resume-item-list">
+    		    <li>Overall GPA: 3.92/4.0 (91.71/100) &#160;&#160;&#160; <b>Major GPA: 3.98/4.0 (93.78/100)</b> &#160;&#160;&#160; <b>Rank: 1/78</b></li>
+    		    <li>Member of <a href="http://english.seiee.sjtu.edu.cn/english/info/8338.htm" target = "_blank">IEEE honor class</a>, an elite program at SJTU which aims to nurture scientists in computer science, electrical and electronic technology, and information science based on MIT’s educational model.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Yale University</h3>
+          <h4 class="resume-item-details">International Exchange Student  &bull; Jun. 2014 &mdash; Aug. 2014 </h4>
+    		  <ul class="resume-item-list">
+    		  	<li>One of 10 top students fully funded by notable alumnus <a href="http://www.forbes.com/profile/neil-shen/" target = "_blank">Neil Shen</a>.</li>
+    		  	<li>Studied in the Intensive English Program at <a href="http://summer-eli.yale.edu/" target = "_blank">English Language Institute</a>.</li>
+    		    <li>Earned “Certificate of Excellence” at Yale University.</li>
+          </ul>
+        </div>
+        
+      </section>
+      <!-- end Education -->
+
+            
+      <!-- begin Industry Experience -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Industry Experience</h2>
+        </header>
+        
+        <div class="resume-item">
+          <h3 class="resume-item-title">Google Research</h3>
+          <h4 class="resume-item-details">Research Intern &bull; May 2020 &mdash; Dec. 2020 </h4>
+          <ul class="resume-item-list">
+            <li>Developed a new text encoder pre-training strategy using multiple task-specific attention heads.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Microsoft Research</h3>
+          <h4 class="resume-item-details">Research Intern &bull; May 2019 &mdash; Aug. 2019 </h4>
+          <ul class="resume-item-list">
+            <li>Developed a self-supervised taxonomy expansion method with position-aware graph neural networks.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">LinkedIn</h3>
+          <h4 class="resume-item-details">External Researcher &bull; Sep. 2018 &mdash; Oct. 2019 </h4>
+          <ul class="resume-item-list">
+            <li>Proposed a hypernymy discovery method to exploit the context granularity in a text-rich heterogeneous information network.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Google</h3>
+          <h4 class="resume-item-details">Research SWE Intern &bull; May 2017 &mdash; Aug. 2017 </h4>
+          <ul class="resume-item-list">
+            <li>Developed a multi-task learning method for email search ranking with auxiliary query clustering.</li>
+          </ul>
+        </div>
+
+      </section>
+      <!-- end Industry Experience -->
+
+      <!-- begin Teaching Experience -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Teaching Experience</h2>
+        </header>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">UIUC CS512: Data Mining Principle</h3>
+          <h4 class="resume-item-details">Teaching Assistant &bull; Spring 2020 </h4>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">UIUC CS412: Introduction to Data Mining</h3>
+          <h4 class="resume-item-details">Guest Lecturer &bull; Spring 2019 </h4>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">SJTU CS119: Principles of Computer Algorithms</h3>
+          <h4 class="resume-item-details">Teaching Assistant &bull; Summer 2015 </h4>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">SJTU CS114: Programming and Data Structures</h3>
+          <h4 class="resume-item-details">Teaching Assistant &bull; Spring 2015 </h4>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">SJTU MA118: Mathematical Analysis I</h3>
+          <h4 class="resume-item-details">Teaching Assistant &bull; Fall 2013 </h4>
+        </div>
+
+      </section>
+      <!-- end Teaching Experience -->
+
+      <!-- begin Services -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Services</h2>
+        </header>
+        
+		    <div class="resume-item">
+          <ul class="resume-item-list" style="font-size: 18px;">
+            <li><b>Conference Program Committee:</b> NAACL-HLT 2021, AAAI 2021, ACL 2020, EMNLP 2020, AAAI 2020, ECMLPKDD 2020, EMNLP 2019, ICLR LLD Workshop 2019.</li>
+            <li><b>Journal Reviewer:</b> IEEE Transactions of Knowledge and Data Engineering (TKDE).</li>
+            <li><b>Conference External Reviewer:</b> ACL 2021, WebConf 2021, KDD 2020, WebConf 2020, KDD 2019, WSDM 2018, KDD 2018, SIGIR 2017, EMNLP 2017.</li>
+          </ul>
+        </div>
+
+      </section>
+      <!-- end Services -->
+      
+      
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Skills</h2>
+        </header>
+
+		    <div class="resume-item">
+          <ul class="resume-item-list" style="font-size: 18px;">
+            <li><b>Programming Languages:</b> Python, C++, MATLAB, R, Mathematica </li>
+            <li><b>Deep Learning Platforms:</b> PyTorch, TensorFlow 2</li>
+            <li><b>Tools:</b> Git, Latex, Vim, Linux, Keynote, MS Offices, OmniGraffle </li>
+          </ul>
+        </div>
+        
+      </section>
+      <!-- end Skills -->
+
+	 
+	
+<!-- 
+      {% if site.resume_section_associations %}
+      <!~~ begin Associations ~~>
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Associations</h2>
+        </header>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title"><a href="http://beerfortheworld.com">Beer for the World</a></h3>
+          <h4 class="resume-item-details">Volunteer &bull; 2008 &mdash; Present</h4>
+          <p class="resume-item-copy">Organized fund drives and participated in fundraising events for the benefit of families in third world countries without proper access to malt beverages.</p>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Springfield Nuclear Workers Labor Union</h3>
+          <h4 class="resume-item-details">Member in Good Standin &bull; 1994 &mdash; Present</h4>
+          <p class="resume-item-copy">Founding member of the local nuclear workers labor union.</p>
+        </div>
+
+      </section>
+      <!~~ end Associations ~~>
+      {% endif %}
+
+      {% if site.resume_section_links %}
+      <!~~ begin Links ~~>
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Additional Links</h2>
+        </header>
+
+        <div class="resume-item">
+          <ul class="resume-item-list">
+            <li><a href="#">Springfield Poker Club</a></li>
+            <li><a href="#">Springfield Donut Eater's User Group</a></li>
+          </ul>
+        </div>
+
+      </section>
+      <!~~ end Links ~~>
+      {% endif %}
+ -->
+
+
+    </div>
+	  {% include footer.html %}
+	
+		<!-- {% include disqus.html %} -->
+
+    {% include ga.html %}
+    
+
+  </body>
+
+</html>
