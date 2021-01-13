@@ -1,11 +1,9 @@
 # Site settings
 title: Haonan Wang
 email: haonan3@illinois.edu
-# description: Keep it Simple
 # description: So we beat on, boats against the current, borne back ceaselessly into the past.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url:  # the base hostname & protocol for your site
-# twitter_username: mickeyjs6
 github_username:  haonan3
 
 # Build settings
@@ -46,6 +44,7 @@ resume_social_links:
   resume_github_url:            "https://github.com/haonan3"
   resume_linkedin_url:          "https://www.linkedin.com/in/haonan-wang-86760313a/"
   resume_website_url:           "https://haonan3.github.io"
+  resume_google
 
 # Design settings
 resume_theme:                   default
