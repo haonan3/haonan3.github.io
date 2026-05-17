@@ -368,6 +368,86 @@
       color: #fff;
     }
     .social.cv:hover i { color: #fff; }
+    .social.wechat-btn { cursor: pointer; }
+    .social.wechat-btn:hover {
+      border-color: #07C160;
+      color: #07C160;
+    }
+    .social.wechat-btn:hover i { color: #07C160; }
+
+    /* =========================================================
+       WeChat QR modal
+       ========================================================= */
+    .qr-modal {
+      position: fixed; inset: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      animation: qrFade .2s ease;
+    }
+    .qr-modal[hidden] { display: none; }
+    .qr-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(8, 8, 12, 0.55);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .qr-card {
+      position: relative;
+      background: var(--card);
+      padding: 22px 22px 18px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      max-width: 320px;
+      width: 100%;
+      text-align: center;
+      animation: qrPop .28s cubic-bezier(.2,.8,.2,1);
+      border: 1px solid var(--line);
+    }
+    .qr-card h3 {
+      font-size: 16px;
+      margin: 0 0 4px;
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+      display: inline-flex; align-items: center; gap: 8px;
+      justify-content: center;
+    }
+    .qr-card h3 i { color: #07C160; }
+    .qr-card .qr-sub {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin: 0 0 14px;
+      letter-spacing: 0.04em;
+    }
+    .qr-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      background: #fff;
+    }
+    .qr-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--ink-2);
+      cursor: pointer;
+      font-size: 16px; line-height: 1;
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: all .15s ease;
+    }
+    .qr-close:hover { border-color: var(--accent); color: var(--accent-deep); transform: rotate(90deg); }
+    @keyframes qrPop {
+      from { transform: scale(0.92) translateY(8px); opacity: 0; }
+      to   { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    @keyframes qrFade { from { opacity: 0; } to { opacity: 1; } }
 
     @media (max-width: 720px) {
       .hero { padding: 56px 0 40px; }
@@ -1063,7 +1143,7 @@
           <a class="social" href="https://scholar.google.com/citations?user=cLziVZMAAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
           <a class="social" href="https://github.com/haonan3" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
           <a class="social" href="https://x.com/Haonan_Wang_" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
-          <a class="social" href="https://openreview.net/profile?id=~Haonan_Wang1" target="_blank" rel="noopener"><i class="fa-solid fa-book-open"></i> OpenReview</a>
+          <a class="social wechat-btn" href="#wechat" id="wechatBtn" aria-haspopup="dialog"><i class="fa-brands fa-weixin"></i> WeChat</a>
           <a class="social cv" href="HaonanWang_Resume_05_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> CV</a>
         </div>
       </div>
@@ -1661,9 +1741,41 @@
     </div>
   </footer>
 
+  <!-- WeChat QR modal -->
+  <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle" hidden>
+    <div class="qr-backdrop" data-close></div>
+    <div class="qr-card">
+      <button class="qr-close" aria-label="Close" data-close>×</button>
+      <h3 id="qrTitle"><i class="fa-brands fa-weixin"></i> Add me on WeChat</h3>
+      <p class="qr-sub">scan to add friend · 扫一扫加好友</p>
+      <img class="qr-img" src="assets/wechat_qr_code.jpg" alt="Haonan Wang WeChat QR code" />
+    </div>
+  </div>
+
   <script>
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // WeChat QR modal
+    (function() {
+      const btn = document.getElementById('wechatBtn');
+      const modal = document.getElementById('qrModal');
+      if (!btn || !modal) return;
+      const open = (e) => {
+        if (e) e.preventDefault();
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+      };
+      btn.addEventListener('click', open);
+      modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', close));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden) close();
+      });
+    })();
 
     // Theme toggle (persisted)
     const root = document.documentElement;
