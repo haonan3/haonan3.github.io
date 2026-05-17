@@ -3,49 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haonan Wang</title>
-  <meta name="description" content="Haonan Wang — PhD student at NUS School of Computing, working on LLM reasoning, agents, and generative AI." />
+  <title>Haonan Wang · 王淏楠</title>
+  <meta name="description" content="Haonan Wang (王淏楠) — PhD candidate at NUS School of Computing, working on LLM reasoning, agents, and generative AI." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Haonan Wang" />
-  <meta property="og:description" content="PhD student at NUS School of Computing." />
+  <meta property="og:title" content="Haonan Wang · 王淏楠" />
+  <meta property="og:description" content="PhD candidate at NUS School of Computing — LLM reasoning, agents, generative AI." />
   <meta property="og:type" content="website" />
 
-  <!-- Favicon: a simple orange dot -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><circle cx=%228%22 cy=%228%22 r=%226%22 fill=%22%23EF7C00%22/></svg>" />
+  <!-- Favicon: animated gradient dot -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%2216%22 y2=%2216%22><stop offset=%220%22 stop-color=%22%23FF8C1A%22/><stop offset=%221%22 stop-color=%22%23E84A5F%22/></linearGradient></defs><circle cx=%228%22 cy=%228%22 r=%226%22 fill=%22url(%23g)%22/></svg>" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     /* =========================================================
-       Design tokens — change here to re-skin the whole site
+       Design tokens
        ========================================================= */
     :root {
-      --accent:        #EF7C00;        /* NUS orange */
-      --accent-soft:   #FEF1E0;        /* tinted background */
-      --accent-deep:   #C45F00;        /* hover / pressed */
-      --ink:           #1a1a1a;        /* primary text */
-      --ink-2:         #3a3a3a;        /* secondary text */
-      --muted:         #6b7280;        /* tertiary text */
-      --line:          #e9e7e3;        /* hairlines */
-      --bg:            #fbfaf7;        /* page background — warm off-white */
+      --accent:        #EF7C00;
+      --accent-2:      #E84A5F;
+      --accent-3:      #6C5CE7;
+      --accent-soft:   #FEF1E0;
+      --accent-deep:   #C45F00;
+      --ink:           #111114;
+      --ink-2:         #2a2a30;
+      --ink-3:         #4a4a52;
+      --muted:         #6b7280;
+      --line:          #e9e7e3;
+      --line-2:        #f1efea;
+      --bg:            #fbfaf7;
+      --bg-2:          #f5f3ee;
       --card:          #ffffff;
       --shadow-sm:     0 1px 2px rgba(20, 14, 0, 0.04);
       --shadow-md:     0 6px 24px -8px rgba(20, 14, 0, 0.10), 0 2px 6px rgba(20, 14, 0, 0.04);
+      --shadow-lg:     0 30px 60px -20px rgba(20, 14, 0, 0.18), 0 10px 24px -12px rgba(20, 14, 0, 0.10);
 
       --serif:  "Fraunces", "Iowan Old Style", "Apple Garamond", Georgia, serif;
       --sans:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       --mono:   "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+      --cjk:    "Noto Serif SC", "Songti SC", "STSong", serif;
 
-      --radius:    14px;
-      --radius-sm: 8px;
-      --maxw:      980px;
+      --radius:    16px;
+      --radius-sm: 10px;
+      --maxw:      1040px;
+    }
+
+    [data-theme="dark"] {
+      --accent:        #FFA040;
+      --accent-2:      #FF6E7F;
+      --accent-3:      #8B7CF7;
+      --accent-soft:   #2a1f12;
+      --accent-deep:   #FFB870;
+      --ink:           #f5f3ee;
+      --ink-2:         #d8d4ca;
+      --ink-3:         #a8a496;
+      --muted:         #807a6e;
+      --line:          #2a2823;
+      --line-2:        #1f1e1a;
+      --bg:            #0e0d0b;
+      --bg-2:          #181714;
+      --card:          #1a1916;
+      --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.4);
+      --shadow-md:     0 6px 24px -8px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+      --shadow-lg:     0 30px 60px -20px rgba(0, 0, 0, 0.7), 0 10px 24px -12px rgba(0, 0, 0, 0.4);
     }
 
     /* =========================================================
@@ -62,11 +89,78 @@
       background: var(--bg);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      transition: background .35s ease, color .35s ease;
     }
     a { color: var(--accent-deep); text-decoration: none; transition: color .15s ease; }
     a:hover { color: var(--accent); }
-    h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; color: var(--ink); }
     p { margin: 0 0 1em; }
+
+    /* =========================================================
+       Animated aurora background (hero only)
+       ========================================================= */
+    .aurora {
+      position: absolute; inset: 0;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .aurora::before, .aurora::after {
+      content: "";
+      position: absolute;
+      width: 60vw; height: 60vw;
+      max-width: 700px; max-height: 700px;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.45;
+      animation: float 18s ease-in-out infinite;
+    }
+    .aurora::before {
+      top: -10%; left: -10%;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 65%);
+    }
+    .aurora::after {
+      top: 10%; right: -15%;
+      background: radial-gradient(circle, var(--accent-2) 0%, transparent 65%);
+      animation-delay: -9s;
+      animation-duration: 22s;
+    }
+    .aurora .blob3 {
+      position: absolute;
+      bottom: -20%; left: 30%;
+      width: 50vw; height: 50vw;
+      max-width: 600px; max-height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-3) 0%, transparent 65%);
+      filter: blur(90px);
+      opacity: 0.35;
+      animation: float 26s ease-in-out infinite;
+      animation-delay: -4s;
+    }
+    [data-theme="dark"] .aurora::before { opacity: 0.32; }
+    [data-theme="dark"] .aurora::after { opacity: 0.30; }
+    [data-theme="dark"] .aurora .blob3 { opacity: 0.28; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(5%, 8%) scale(1.08); }
+      66% { transform: translate(-6%, 4%) scale(0.95); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .aurora::before, .aurora::after, .aurora .blob3 { animation: none; }
+      .avatar-ring, .pulse { animation: none !important; }
+    }
+
+    /* Subtle dot grid */
+    .grid-bg {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, var(--line) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+      opacity: 0.5;
+      z-index: -1;
+      pointer-events: none;
+    }
 
     /* =========================================================
        Layout
@@ -80,12 +174,13 @@
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: saturate(180%) blur(14px);
       -webkit-backdrop-filter: saturate(180%) blur(14px);
-      background: rgba(251, 250, 247, 0.78);
+      background: color-mix(in oklab, var(--bg) 78%, transparent);
       border-bottom: 1px solid var(--line);
+      transition: background .35s ease, border-color .35s ease;
     }
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
-      height: 60px;
+      height: 62px;
     }
     .nav-name {
       font-family: var(--serif);
@@ -93,11 +188,19 @@
       font-size: 18px;
       color: var(--ink);
       letter-spacing: -0.01em;
+      display: inline-flex; align-items: center; gap: 10px;
     }
     .nav-name .dot {
-      display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-      background: var(--accent); margin-right: 8px; transform: translateY(-2px);
+      display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 0 rgba(239,124,0, 0.4);
+      animation: pulse 2.4s ease-in-out infinite;
     }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239,124,0, 0.5); }
+      50%      { box-shadow: 0 0 0 6px rgba(239,124,0, 0); }
+    }
+    .nav-right { display: flex; align-items: center; gap: 6px; }
     .nav-links {
       display: flex; gap: 26px;
       font-size: 14.5px; font-weight: 500;
@@ -108,119 +211,368 @@
     }
     .nav-links a::after {
       content: ""; position: absolute; left: 0; right: 0; bottom: -6px;
-      height: 2px; background: var(--accent); transform: scaleX(0);
-      transform-origin: left; transition: transform .2s ease;
+      height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transform: scaleX(0);
+      transform-origin: left; transition: transform .25s ease;
     }
     .nav-links a:hover { color: var(--ink); }
     .nav-links a:hover::after { transform: scaleX(1); }
 
+    .theme-toggle {
+      margin-left: 18px;
+      width: 36px; height: 36px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--ink-2);
+      transition: all .2s ease;
+    }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent-deep); transform: rotate(15deg); }
+    .theme-toggle .sun { display: none; }
+    [data-theme="dark"] .theme-toggle .sun { display: inline; }
+    [data-theme="dark"] .theme-toggle .moon { display: none; }
+
     @media (max-width: 640px) {
-      .nav-links { gap: 16px; font-size: 13.5px; }
+      .nav-links { gap: 14px; font-size: 13.5px; }
+      .theme-toggle { margin-left: 10px; }
     }
 
     /* =========================================================
        Hero
        ========================================================= */
-    .hero { padding: 72px 0 56px; }
+    .hero {
+      position: relative;
+      padding: 88px 0 64px;
+      overflow: hidden;
+    }
     .hero-grid {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 48px;
+      grid-template-columns: 240px 1fr;
+      gap: 56px;
       align-items: start;
+      position: relative; z-index: 1;
     }
     .avatar-wrap {
       position: relative;
-      width: 220px; height: 220px;
+      width: 240px; height: 240px;
     }
     .avatar {
       width: 100%; height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: var(--shadow-md);
-      border: 4px solid #fff;
+      box-shadow: var(--shadow-lg);
+      border: 5px solid var(--card);
+      transition: transform .4s cubic-bezier(.2,.8,.2,1);
     }
+    .avatar:hover { transform: scale(1.03) rotate(-1deg); }
     .avatar-ring {
-      position: absolute; inset: -10px;
+      position: absolute; inset: -12px;
       border-radius: 50%;
       border: 1.5px dashed var(--accent);
       opacity: 0.45;
       animation: spin 60s linear infinite;
     }
+    .avatar-ring.r2 {
+      inset: -22px;
+      border-color: var(--accent-2);
+      opacity: 0.25;
+      animation-duration: 90s;
+      animation-direction: reverse;
+    }
     @keyframes spin { to { transform: rotate(360deg); } }
 
+    .name-line {
+      display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px;
+      margin: 4px 0 8px;
+    }
     .hero h1 {
-      font-size: clamp(34px, 5vw, 48px);
-      margin: 4px 0 6px;
+      font-size: clamp(38px, 5.4vw, 56px);
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      background: linear-gradient(135deg, var(--ink) 0%, var(--accent-deep) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
     }
-    .hero .pronoun {
-      color: var(--muted); font-size: 16px; font-weight: 400;
-      font-family: var(--sans);
-      margin-left: 10px;
+    .name-cjk {
+      font-family: var(--cjk);
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 500;
+      color: var(--ink-3);
+      letter-spacing: 0.04em;
     }
-    .hero .role {
+    .name-cjk .pinyin {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-left: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .role {
       font-size: 17px;
       color: var(--ink-2);
-      margin: 0 0 18px;
+      margin: 0 0 22px;
+      display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
     }
-    .hero .role .school { color: var(--accent-deep); font-weight: 500; }
+    .role .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: 11.5px; font-weight: 600;
+      background: var(--accent-soft); color: var(--accent-deep);
+      padding: 3px 9px; border-radius: 999px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .role .badge::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    .role .school { color: var(--accent-deep); font-weight: 500; }
 
-    .bio { font-size: 16.5px; color: var(--ink-2); max-width: 62ch; }
+    .bio { font-size: 16.5px; color: var(--ink-2); max-width: 64ch; }
     .bio strong { color: var(--ink); font-weight: 600; }
+    .bio.muted { color: var(--ink-3); font-size: 15.5px; }
 
     .socials {
       display: flex; flex-wrap: wrap; gap: 10px;
-      margin-top: 22px;
+      margin-top: 26px;
     }
     .social {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 14px;
-      background: #fff;
+      padding: 8px 15px;
+      background: var(--card);
       border: 1px solid var(--line);
       border-radius: 999px;
       font-size: 13.5px; font-weight: 500;
       color: var(--ink-2);
-      transition: all .15s ease;
+      transition: all .18s cubic-bezier(.2,.8,.2,1);
     }
     .social i { font-size: 14px; color: var(--muted); transition: color .15s ease; }
     .social:hover {
       border-color: var(--accent);
       color: var(--accent-deep);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
       box-shadow: var(--shadow-sm);
     }
     .social:hover i { color: var(--accent); }
     .social.cv {
-      background: var(--ink); color: #fff; border-color: var(--ink);
+      background: var(--ink); color: var(--bg); border-color: var(--ink);
     }
-    .social.cv i { color: #fff; }
-    .social.cv:hover { background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
+    .social.cv i { color: var(--bg); }
+    .social.cv:hover {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-color: transparent;
+      color: #fff;
+    }
     .social.cv:hover i { color: #fff; }
 
     @media (max-width: 720px) {
-      .hero { padding: 48px 0 36px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 28px; justify-items: start; }
-      .avatar-wrap { width: 160px; height: 160px; }
+      .hero { padding: 56px 0 40px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; justify-items: start; }
+      .avatar-wrap { width: 170px; height: 170px; }
+    }
+
+    /* =========================================================
+       Research trajectory (rail of milestone cards)
+       ========================================================= */
+    .trajectory {
+      margin: 44px 0 0;
+      position: relative; z-index: 1;
+    }
+    .trajectory-header {
+      display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px;
+      margin-bottom: 18px;
+    }
+    .trajectory-header .label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 600;
+      color: var(--ink-2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .trajectory-header .label .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+    .trajectory-header .meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .trajectory-rail {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+    /* Subtle horizontal rail line behind the year chips */
+    .trajectory-rail::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 8%; right: 8%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--accent) 15%,
+        var(--accent-2) 50%,
+        var(--accent-3) 85%,
+        transparent 100%
+      );
+      opacity: 0.32;
+      z-index: 0;
+    }
+
+    .milestone {
+      position: relative; z-index: 1;
+      padding: 14px 15px 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      display: flex; flex-direction: column;
+      min-height: 180px;
+      transition: all .25s cubic-bezier(.2,.8,.2,1);
+      overflow: hidden;
+    }
+    .milestone-area {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: var(--mono);
+      font-size: 9.5px; font-weight: 700;
+      color: var(--accent-3);
+      background: color-mix(in oklab, var(--accent-3) 12%, transparent);
+      padding: 4px 9px;
+      border-radius: 4px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      transition: background .2s ease;
+    }
+    .milestone:hover .milestone-area {
+      background: color-mix(in oklab, var(--accent-3) 22%, transparent);
+    }
+    .milestone::after {
+      content: "";
+      position: absolute; left: 0; right: 0; bottom: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s cubic-bezier(.2,.8,.2,1);
+    }
+    .milestone:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in oklab, var(--accent) 35%, var(--line));
+      box-shadow: var(--shadow-md);
+    }
+    .milestone:hover::after { transform: scaleX(1); }
+
+    .milestone-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 6px; margin-bottom: 10px;
+      min-height: 22px;
+    }
+    .milestone-year {
+      font-family: var(--mono);
+      font-size: 10.5px; font-weight: 700;
+      color: var(--ink);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 3px 9px; border-radius: 999px;
+      letter-spacing: 0.08em;
+    }
+    .milestone-badge {
+      font-family: var(--mono);
+      font-size: 9px; font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      padding: 3px 7px; border-radius: 3px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .milestone-title {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      line-height: 1.25;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+    }
+    .milestone-desc {
+      font-size: 12px;
+      color: var(--ink-3);
+      margin: 0 0 12px;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .milestone-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      padding-top: 8px;
+      border-top: 1px dashed var(--line);
+    }
+    .milestone.now {
+      background: linear-gradient(180deg, color-mix(in oklab, var(--accent-soft) 75%, var(--card)) 0%, var(--card) 90%);
+      border-color: color-mix(in oklab, var(--accent) 40%, var(--line));
+    }
+    .milestone.now .milestone-year {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      border-color: transparent;
+    }
+    .milestone.now .milestone-pulse {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 0 rgba(239,124,0, 0.5);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    @media (max-width: 1080px) {
+      .trajectory-rail { grid-template-columns: repeat(3, 1fr); }
+      .trajectory-rail::before { display: none; }
+    }
+    @media (max-width: 560px) {
+      .trajectory-rail { grid-template-columns: 1fr; }
+      .milestone { min-height: 0; }
     }
 
     /* =========================================================
        Section
        ========================================================= */
-    section { padding: 44px 0; border-top: 1px solid var(--line); }
+    section { padding: 56px 0; border-top: 1px solid var(--line); }
     .section-head {
       display: flex; align-items: baseline; gap: 14px;
-      margin-bottom: 26px;
+      margin-bottom: 30px;
     }
     .section-head h2 {
-      font-size: 26px; margin: 0;
+      font-size: 30px; margin: 0;
+      letter-spacing: -0.02em;
     }
     .section-head .marker {
-      width: 28px; height: 3px; background: var(--accent); border-radius: 2px;
-      transform: translateY(-4px);
+      width: 32px; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 2px;
+      transform: translateY(-6px);
     }
     .section-head .meta {
       margin-left: auto;
-      font-size: 13px; color: var(--muted);
+      font-size: 12.5px; color: var(--muted);
       font-family: var(--mono);
+      letter-spacing: 0.04em;
     }
 
     /* =========================================================
@@ -228,39 +580,50 @@
        ========================================================= */
     .interests {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
     }
     .interest {
-      padding: 16px 18px;
+      position: relative;
+      padding: 20px 22px;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
-      transition: all .15s ease;
+      transition: all .2s cubic-bezier(.2,.8,.2,1);
+      overflow: hidden;
+    }
+    .interest::before {
+      content: "";
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      opacity: 0;
+      transition: opacity .2s ease;
     }
     .interest:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
+      border-color: transparent;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
     }
+    .interest:hover::before { opacity: 1; }
     .interest .tag {
       display: inline-block;
-      font-family: var(--mono); font-size: 11px; font-weight: 500;
+      font-family: var(--mono); font-size: 11px; font-weight: 600;
       color: var(--accent-deep);
       background: var(--accent-soft);
-      padding: 2px 8px; border-radius: 4px;
-      margin-bottom: 8px;
-      letter-spacing: 0.02em;
+      padding: 3px 9px; border-radius: 4px;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
     }
-    .interest h3 { font-size: 15px; margin: 0 0 4px; font-family: var(--sans); font-weight: 600; }
-    .interest p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.5; }
+    .interest h3 { font-size: 15.5px; margin: 0 0 6px; font-family: var(--sans); font-weight: 600; letter-spacing: -0.005em; }
+    .interest p { font-size: 13.5px; color: var(--ink-3); margin: 0; line-height: 1.55; }
 
     /* =========================================================
        News
        ========================================================= */
     .news-list {
       list-style: none; padding: 0; margin: 0;
-      max-height: 280px;
+      max-height: 320px;
       overflow-y: auto;
       padding-right: 8px;
     }
@@ -272,7 +635,7 @@
       display: grid;
       grid-template-columns: 110px 1fr;
       gap: 18px;
-      padding: 12px 0;
+      padding: 14px 0;
       border-bottom: 1px dashed var(--line);
       align-items: baseline;
     }
@@ -287,10 +650,11 @@
     .news-text .new-tag {
       display: inline-block;
       font-family: var(--mono); font-size: 10px; font-weight: 600;
-      background: var(--accent); color: #fff;
-      padding: 1px 6px; border-radius: 3px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff;
+      padding: 2px 7px; border-radius: 3px;
       margin-right: 6px;
       vertical-align: 2px;
+      letter-spacing: 0.05em;
     }
 
     @media (max-width: 560px) {
@@ -300,43 +664,114 @@
     /* =========================================================
        Publications
        ========================================================= */
-    .pubs { display: flex; flex-direction: column; gap: 18px; }
+    .pub-filters {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 22px;
+    }
+    .pub-filter {
+      font-family: var(--mono); font-size: 12px; font-weight: 500;
+      padding: 6px 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink-3);
+      cursor: pointer;
+      transition: all .15s ease;
+      letter-spacing: 0.03em;
+    }
+    .pub-filter:hover { border-color: var(--accent); color: var(--accent-deep); }
+    .pub-filter.active {
+      background: var(--ink); color: var(--bg); border-color: var(--ink);
+    }
+    .pub-filter .count {
+      display: inline-block;
+      margin-left: 5px; font-size: 10.5px;
+      opacity: 0.7;
+    }
+    .pub-legend {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin: -10px 0 22px;
+      letter-spacing: 0.02em;
+    }
+    .pub-legend .legend-stripe {
+      display: inline-block;
+      width: 3px; height: 13px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    .pub-legend .legend-star {
+      color: var(--accent-deep);
+      font-weight: 700;
+    }
+
+    .pubs { display: flex; flex-direction: column; gap: 16px; }
     .pub {
       display: grid;
-      grid-template-columns: 80px 1fr;
+      grid-template-columns: 86px 1fr;
       gap: 22px;
-      padding: 18px 20px;
+      padding: 20px 22px;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      transition: all .18s ease;
+      transition: all .2s cubic-bezier(.2,.8,.2,1);
+      position: relative;
     }
+    .pub::before {
+      content: "";
+      position: absolute; left: -1px; top: -1px; bottom: -1px;
+      width: 3px; border-radius: var(--radius) 0 0 var(--radius);
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    /* Persistent (but soft) stripe for first-author / co-first papers */
+    .pub[data-tags~="first"]::before { opacity: 0.55; }
     .pub:hover {
-      border-color: var(--accent);
       box-shadow: var(--shadow-md);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+    }
+    .pub:hover::before { opacity: 1; }
+    .pub.featured {
+      background: linear-gradient(180deg, color-mix(in oklab, var(--accent-soft) 65%, var(--card)) 0%, var(--card) 100%);
     }
     .pub-year {
       font-family: var(--serif);
-      font-size: 32px; font-weight: 500;
+      font-size: 34px; font-weight: 600;
       color: var(--accent);
       line-height: 1;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
     }
-    .pub-year .sub { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 4px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .pub-year .sub {
+      display: block;
+      font-family: var(--mono); font-size: 10.5px;
+      color: var(--muted); font-weight: 500;
+      margin-top: 6px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      -webkit-text-fill-color: var(--muted);
+    }
     .pub-title {
       font-family: var(--serif);
       font-size: 18px; font-weight: 600;
       color: var(--ink);
-      margin: 0 0 6px;
+      margin: 0 0 7px;
       line-height: 1.35;
+      letter-spacing: -0.01em;
     }
-    .pub-authors { font-size: 14px; color: var(--ink-2); margin: 0 0 6px; }
+    .pub-authors { font-size: 13.5px; color: var(--ink-2); margin: 0 0 6px; line-height: 1.55; }
     .pub-authors .me { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--accent); padding-bottom: 1px; }
+    .pub-authors .co { color: var(--ink-2); font-weight: 500; }
     .pub-venue {
       font-size: 13px; color: var(--muted);
       font-style: italic;
-      margin: 0 0 10px;
+      margin: 0 0 11px;
     }
     .pub-venue .badge {
       display: inline-block;
@@ -347,49 +782,146 @@
       margin-left: 6px;
       letter-spacing: 0.04em;
     }
+    .pub-venue .badge.hot {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+    }
     .pub-links { display: flex; flex-wrap: wrap; gap: 6px; }
     .pub-link {
-      display: inline-flex; align-items: center; gap: 4px;
+      display: inline-flex; align-items: center; gap: 5px;
       font-family: var(--mono); font-size: 11.5px; font-weight: 500;
-      padding: 3px 9px;
+      padding: 4px 10px;
       border: 1px solid var(--line);
-      border-radius: 4px;
+      border-radius: 5px;
       color: var(--ink-2);
-      background: #fff;
+      background: var(--card);
+      transition: all .15s ease;
     }
     .pub-link:hover {
       border-color: var(--accent);
       background: var(--accent-soft);
       color: var(--accent-deep);
     }
+    .pub.hidden { display: none; }
 
     @media (max-width: 560px) {
-      .pub { grid-template-columns: 1fr; gap: 6px; padding: 16px; }
+      .pub { grid-template-columns: 1fr; gap: 8px; padding: 18px; }
       .pub-year { font-size: 22px; }
       .pub-year .sub { display: inline; margin-left: 8px; }
     }
 
     /* =========================================================
+       Awards timeline
+       ========================================================= */
+    .awards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .award {
+      position: relative;
+      padding: 18px 20px 18px 52px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      transition: all .2s ease;
+    }
+    .award:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .award .icon {
+      position: absolute; left: 18px; top: 19px;
+      width: 24px; height: 24px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; font-size: 11px;
+    }
+    .award .when {
+      font-family: var(--mono); font-size: 11.5px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .award .what {
+      font-size: 14.5px; font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+    .award .what .em { color: var(--accent-deep); }
+
+    /* =========================================================
        Experience
        ========================================================= */
-    .exp-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+    .exp-list { list-style: none; margin: 0; padding: 0; }
     .exp-item {
+      position: relative;
       display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 22px;
-      padding: 14px 0;
+      grid-template-columns: 150px 1fr;
+      gap: 26px;
+      padding: 18px 0 18px 24px;
       border-bottom: 1px solid var(--line);
     }
+    .exp-item::before {
+      content: "";
+      position: absolute; left: 6px; top: 26px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 2px solid var(--accent);
+      z-index: 2;
+    }
+    .exp-item::after {
+      content: "";
+      position: absolute; left: 10px; top: 0; bottom: 0;
+      width: 1px;
+      background: var(--line);
+    }
+    .exp-item:first-child::after { top: 24px; }
+    .exp-item:last-child::after { bottom: auto; height: 24px; }
     .exp-item:last-child { border-bottom: none; }
-    .exp-date { font-family: var(--mono); font-size: 12.5px; color: var(--muted); padding-top: 2px; }
-    .exp-role { font-weight: 600; font-size: 15px; color: var(--ink); margin: 0 0 2px; }
-    .exp-org { font-size: 14px; color: var(--ink-2); margin: 0 0 4px; }
+    .exp-date { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 4px; letter-spacing: 0.03em; }
+    .exp-role { font-weight: 600; font-size: 15px; color: var(--ink); margin: 0 0 3px; letter-spacing: -0.005em; }
+    .exp-org { font-size: 13.5px; color: var(--ink-2); margin: 0 0 5px; }
     .exp-org .dot { color: var(--accent); margin: 0 6px; }
-    .exp-detail { font-size: 13.5px; color: var(--muted); margin: 0; }
+    .exp-detail { font-size: 13px; color: var(--ink-3); margin: 0; }
 
     @media (max-width: 560px) {
-      .exp-item { grid-template-columns: 1fr; gap: 4px; }
+      .exp-item { grid-template-columns: 1fr; gap: 4px; padding-left: 22px; }
     }
+
+    /* =========================================================
+       Teaching
+       ========================================================= */
+    .teaching {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .course {
+      padding: 16px 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      transition: all .2s ease;
+    }
+    .course:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .course .code {
+      font-family: var(--mono); font-size: 11px; font-weight: 600;
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+      padding: 3px 8px; border-radius: 4px;
+      display: inline-block; margin-bottom: 8px;
+      letter-spacing: 0.04em;
+    }
+    .course .title { font-size: 14.5px; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
+    .course .when { font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.03em; }
 
     /* =========================================================
        Service
@@ -399,40 +931,68 @@
       margin: 0; padding: 0; list-style: none;
     }
     .service-list li {
-      font-family: var(--mono); font-size: 12.5px;
-      padding: 6px 12px;
+      font-family: var(--mono); font-size: 12.5px; font-weight: 500;
+      padding: 7px 13px;
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 4px;
+      border-radius: 5px;
       color: var(--ink-2);
+      transition: all .15s ease;
     }
-    .service-note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+    .service-list li:hover {
+      border-color: var(--accent);
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+    }
+    .service-list li.gold {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; border-color: transparent;
+    }
+    .service-note { color: var(--ink-3); font-size: 14px; margin-top: 16px; }
 
     /* =========================================================
        Footer
        ========================================================= */
     footer {
-      padding: 36px 0 48px;
+      padding: 44px 0 52px;
       border-top: 1px solid var(--line);
       text-align: center;
       color: var(--muted);
       font-size: 13px;
     }
-    footer .heart { color: var(--accent); }
+    footer .heart {
+      color: var(--accent);
+      animation: beat 1.4s ease-in-out infinite;
+      display: inline-block;
+    }
+    @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
     footer a { color: var(--ink-2); }
 
     /* =========================================================
-       Reveal animation on load
+       Reveal animations
        ========================================================= */
-    .reveal { opacity: 0; transform: translateY(8px); animation: reveal .6s ease forwards; }
+    .reveal { opacity: 0; transform: translateY(10px); animation: reveal .7s cubic-bezier(.2,.8,.2,1) forwards; }
     .reveal.d1 { animation-delay: .05s; }
     .reveal.d2 { animation-delay: .15s; }
     .reveal.d3 { animation-delay: .25s; }
     .reveal.d4 { animation-delay: .35s; }
     @keyframes reveal { to { opacity: 1; transform: none; } }
 
+    .scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .scroll-reveal.in { opacity: 1; transform: none; }
+
     /* selection */
     ::selection { background: var(--accent); color: #fff; }
+
+    /* command palette hint */
+    .kbd {
+      display: inline-flex; align-items: center; gap: 2px;
+      font-family: var(--mono); font-size: 10.5px; font-weight: 600;
+      padding: 1px 6px; border-radius: 4px;
+      background: var(--line-2);
+      color: var(--ink-3);
+      border: 1px solid var(--line);
+    }
   </style>
 </head>
 <body>
@@ -443,11 +1003,17 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#top" class="nav-name"><span class="dot"></span>Haonan Wang</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#news">News</a>
-        <a href="#experience">Experience</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#awards">Awards</a>
+          <a href="#experience">Experience</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon moon"></i>
+          <i class="fa-solid fa-sun sun"></i>
+        </button>
       </div>
     </div>
   </nav>
@@ -456,31 +1022,40 @@
        HERO
        ========================================================= -->
   <header id="top" class="hero">
+    <div class="aurora"><div class="blob3"></div></div>
+    <div class="grid-bg"></div>
     <div class="container hero-grid">
       <div class="avatar-wrap reveal d1">
+        <div class="avatar-ring r2"></div>
         <div class="avatar-ring"></div>
         <img class="avatar" src="assets/avatar.jpg" alt="Haonan Wang" />
       </div>
       <div class="reveal d2">
-        <h1>Haonan Wang <span class="pronoun">/ 王浩楠</span></h1>
+        <div class="name-line">
+          <h1>Haonan Wang</h1>
+          <span class="name-cjk">王淏楠<span class="pinyin">/ Hàonán Wáng /</span></span>
+        </div>
         <p class="role">
-          PhD Student · <span class="school">NUS School of Computing</span>
+          <span class="badge">PhD Candidate</span>
+          <span><span class="school">NUS School of Computing</span> · Singapore</span>
         </p>
         <p class="bio">
-          I am a PhD student at the <strong>National University of Singapore</strong>,
-          advised by <a href="https://ml.comp.nus.edu.sg/" target="_blank" rel="noopener">Prof. Kenji Kawaguchi</a>.
-          Before NUS, I received my B.S. in Computer Science and Statistics from
-          <strong>UIUC</strong>, where I was fortunate to be mentored by
-          Prof. Jiawei Han and Prof. Jingrui He.
+          I am a PhD candidate at the <strong>National University of Singapore</strong>,
+          advised by <a href="https://scholar.google.com/citations?user=aLl3rYoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Kenji Kawaguchi</a>.
+          I previously did a PhD at <strong>UIUC</strong> with <a href="https://scholar.google.com/citations?user=hXpZynkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jingrui He</a>,
+          and received my B.S. in CS &amp; Statistics from UIUC, where I was mentored by
+          <a href="https://scholar.google.com/citations?user=Kv9AbjMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jiawei Han</a>.
         </p>
         <p class="bio">
-          My research centers on building <strong>reasoning, agents, and generative models</strong>
-          that learn efficiently from data and interaction. Recently I work closely with
-          collaborators at <a href="https://miromind.ai/" target="_blank" rel="noopener">MiroMind&nbsp;AI</a>
+          My research builds systems that <strong>reason, plan, and learn from interaction</strong> —
+          spanning long-context modeling, world models, LLM reasoning, and autonomous agents.
+          I am currently focused on RL and infrastructure for <strong>unified models</strong>,
+          in close collaboration with
+          <a href="https://miromind.ai/" target="_blank" rel="noopener">MiroMind&nbsp;AI</a>
           and <a href="https://sail.sea.com/" target="_blank" rel="noopener">Sea AI Lab</a>.
         </p>
-        <p class="bio" style="color: var(--muted); font-size: 15px;">
-          Feel free to reach out if you’re interested in collaborating or chatting about research.
+        <p class="bio muted">
+          Feel free to reach out if you'd like to chat about research or collaborate.
         </p>
 
         <div class="socials">
@@ -489,7 +1064,82 @@
           <a class="social" href="https://github.com/haonan3" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
           <a class="social" href="https://x.com/Haonan_Wang_" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
           <a class="social" href="https://openreview.net/profile?id=~Haonan_Wang1" target="_blank" rel="noopener"><i class="fa-solid fa-book-open"></i> OpenReview</a>
-          <a class="social cv" href="assets/cv.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> CV</a>
+          <a class="social cv" href="HaonanWang_Resume_05_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> CV</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research trajectory: from retrieval to unified models -->
+    <div class="container">
+      <div class="trajectory reveal d3">
+        <div class="trajectory-header">
+          <span class="label"><span class="dot"></span>Research Arc</span>
+          <span class="meta">// retrieval → long context → world models → reasoning → agents → unified</span>
+        </div>
+        <div class="trajectory-rail">
+
+          <article class="milestone">
+            <span class="milestone-area">Generative Retrieval</span>
+            <div class="milestone-head">
+              <span class="milestone-year">2022</span>
+              <span class="milestone-badge">Best Paper</span>
+            </div>
+            <h3 class="milestone-title">Neural Corpus Indexer</h3>
+            <p class="milestone-desc">Generative retrieval that indexes a corpus end-to-end inside model weights.</p>
+            <div class="milestone-tag">Core contributor · NeurIPS</div>
+          </article>
+
+          <article class="milestone">
+            <span class="milestone-area">Long-Context Training</span>
+            <div class="milestone-head">
+              <span class="milestone-year">2024</span>
+            </div>
+            <h3 class="milestone-title">AnchorAttention</h3>
+            <p class="milestone-desc">Diagnosed why BFloat16 silently breaks RoPE under long context — and patched it.</p>
+            <div class="milestone-tag">First author · TMLR</div>
+          </article>
+
+          <article class="milestone">
+            <span class="milestone-area">Video World Models</span>
+            <div class="milestone-head">
+              <span class="milestone-year">2025</span>
+            </div>
+            <h3 class="milestone-title">Next-Event Prediction</h3>
+            <p class="milestone-desc">A future-prediction objective for video — world models that anticipate events, not just tokens.</p>
+            <div class="milestone-tag">Co-first author · ICLR</div>
+          </article>
+
+          <article class="milestone">
+            <span class="milestone-area">LLM Reasoning</span>
+            <div class="milestone-head">
+              <span class="milestone-year">2025</span>
+            </div>
+            <h3 class="milestone-title">Reasoning Systems</h3>
+            <p class="milestone-desc">Parallel-decoding aggregation and demo-driven supervision for stronger reasoners.</p>
+            <div class="milestone-tag">First author · ICLR</div>
+          </article>
+
+          <article class="milestone">
+            <span class="milestone-area">Deep-Research Agents</span>
+            <div class="milestone-head">
+              <span class="milestone-year">2025</span>
+            </div>
+            <h3 class="milestone-title">MiroThinker</h3>
+            <p class="milestone-desc">Open-source deep-research agent scaling model, context, and interaction.</p>
+            <div class="milestone-tag">Open source · MiroMind</div>
+          </article>
+
+          <article class="milestone now">
+            <span class="milestone-area">Unified Models</span>
+            <div class="milestone-head">
+              <span class="milestone-year">Now</span>
+              <span class="milestone-pulse"></span>
+            </div>
+            <h3 class="milestone-title">Unified Model RL</h3>
+            <p class="milestone-desc">Reinforcement learning and training infrastructure for unified multimodal models.</p>
+            <div class="milestone-tag">Current focus</div>
+          </article>
+
         </div>
       </div>
     </div>
@@ -499,30 +1149,30 @@
        ABOUT / RESEARCH INTERESTS
        ========================================================= -->
   <section id="about">
-    <div class="container">
+    <div class="container scroll-reveal">
       <div class="section-head">
         <span class="marker"></span>
         <h2>Research Interests</h2>
-        <span class="meta">/ what I work on</span>
+        <span class="meta">// what I work on</span>
       </div>
       <div class="interests">
         <div class="interest">
-          <span class="tag">01</span>
+          <span class="tag">01 / Reasoning</span>
           <h3>LLM Reasoning</h3>
           <p>Improving how language models reason — through training, decoding, and inference-time aggregation.</p>
         </div>
         <div class="interest">
-          <span class="tag">02</span>
-          <h3>Agents</h3>
-          <p>Building agents that learn from interaction across web and mobile environments.</p>
+          <span class="tag">02 / Agents</span>
+          <h3>Autonomous Agents</h3>
+          <p>Building agents that learn from interaction across web, mobile, and tool-use environments.</p>
         </div>
         <div class="interest">
-          <span class="tag">03</span>
+          <span class="tag">03 / Generation</span>
           <h3>Generative Models</h3>
-          <p>Diffusion and multimodal generative models — capability, controllability, and safety.</p>
+          <p>Diffusion and multimodal generation — capability, controllability, and copyright safety.</p>
         </div>
         <div class="interest">
-          <span class="tag">04</span>
+          <span class="tag">04 / Data</span>
           <h3>Data-Centric AI</h3>
           <p>Scrutinizing high-quality data to improve model capacity, reliability, and trustworthiness.</p>
         </div>
@@ -534,48 +1184,71 @@
        NEWS
        ========================================================= -->
   <section id="news">
-    <div class="container">
+    <div class="container scroll-reveal">
       <div class="section-head">
         <span class="marker"></span>
         <h2>News</h2>
-        <span class="meta">/ recent updates</span>
+        <span class="meta">// recent updates</span>
       </div>
       <ul class="news-list">
         <li class="news-item">
+          <span class="news-date">May 2026</span>
+          <p class="news-text"><span class="new-tag">NEW</span>Recognized as an <strong>ICML 2026 Gold Reviewer</strong>.</p>
+        </li>
+        <li class="news-item">
           <span class="news-date">Oct 2025</span>
-          <p class="news-text"><span class="new-tag">NEW</span>Multiple papers accepted to <strong>ICLR 2026</strong>, including <em>Think in Parallel, Answer as One</em>, <em>PrefixMemory-Tuning</em>, and <em>Fostering Video Reasoning via Next-Event Prediction</em>.</p>
+          <p class="news-text"><span class="new-tag">NEW</span>Four papers accepted to <strong>ICLR 2026</strong>: <em>Think in Parallel, Answer as One</em>; <em>Prefix-Tuning+</em>; <em>Fostering Video Reasoning via Next-Event Prediction</em>; and <em>SeedPrints</em>.</p>
         </li>
         <li class="news-item">
-          <span class="news-date">May 2024</span>
-          <p class="news-text">Our paper on diffusion-model backdoor attacks was selected for an <strong>Oral presentation at ICML 2024</strong>.</p>
+          <span class="news-date">Aug 2025</span>
+          <p class="news-text">Joined <strong>MiroMind AI</strong> as a research intern; helping build <em>MiroThinker</em>, an open-source deep-research agent.</p>
         </li>
         <li class="news-item">
-          <span class="news-date">Nov 2024</span>
-          <p class="news-text">Released <em>AnchorAttention</em> — improved attention for long-context LLM training. Preprint and code on GitHub.</p>
+          <span class="news-date">Feb 2025</span>
+          <p class="news-text">Our paper <em>When Precision Meets Position: BFloat16 Breaks Down RoPE</em> (AnchorAttention) accepted to <strong>TMLR</strong>.</p>
         </li>
         <li class="news-item">
-          <span class="news-date">Aug 2023</span>
-          <p class="news-text">Started my PhD at <strong>NUS School of Computing</strong>, advised by Prof. Kenji Kawaguchi.</p>
+          <span class="news-date">Aug 2024</span>
+          <p class="news-text">Received the <strong>Research Achievement Award</strong> at the National University of Singapore.</p>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jun 2024</span>
+          <p class="news-text">Our diffusion-backdoor paper was selected as <strong>Oral at ICML 2024</strong> (Top 2.37%).</p>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Dec 2022</span>
+          <p class="news-text">Co-authored paper <em>A Neural Corpus Indexer</em> won the <strong>NeurIPS 2022 Best Paper Award</strong> (Top 7 / 3391).</p>
         </li>
       </ul>
     </div>
   </section>
 
   <!-- =========================================================
-       PUBLICATIONS  (first author only)
-       Add new entries by copying a <article class="pub"> block.
+       PUBLICATIONS
        ========================================================= -->
   <section id="publications">
-    <div class="container">
+    <div class="container scroll-reveal">
       <div class="section-head">
         <span class="marker"></span>
-        <h2>Selected Publications</h2>
-        <span class="meta">/ first-authored</span>
+        <h2>Publications</h2>
+        <span class="meta">// selected — see <a href="https://scholar.google.com/citations?user=cLziVZMAAAAJ" target="_blank" rel="noopener">Scholar</a> for full list</span>
       </div>
+
+      <div class="pub-filters" role="tablist">
+        <button class="pub-filter active" data-filter="all">All <span class="count" id="cnt-all"></span></button>
+        <button class="pub-filter" data-filter="first">First-author <span class="count" id="cnt-first"></span></button>
+        <button class="pub-filter" data-filter="featured">Highlights <span class="count" id="cnt-featured"></span></button>
+        <button class="pub-filter" data-filter="2026">2026 <span class="count" id="cnt-2026"></span></button>
+        <button class="pub-filter" data-filter="2025">2025 <span class="count" id="cnt-2025"></span></button>
+        <button class="pub-filter" data-filter="2024">2024 <span class="count" id="cnt-2024"></span></button>
+        <button class="pub-filter" data-filter="2023">≤2023 <span class="count" id="cnt-2023"></span></button>
+      </div>
+      <p class="pub-legend"><span class="legend-stripe"></span> left stripe = first / co-first author &nbsp;·&nbsp; <span class="legend-star">*</span> denotes joint first author</p>
 
       <div class="pubs">
 
-        <article class="pub">
+        <!-- 2026 / ICLR -->
+        <article class="pub" data-tags="first 2026">
           <div class="pub-year">2026<span class="sub">ICLR</span></div>
           <div>
             <h3 class="pub-title">Think in Parallel, Answer as One: Logit Averaging for Open-Ended Reasoning</h3>
@@ -587,23 +1260,23 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-tags="first 2026">
           <div class="pub-year">2026<span class="sub">ICLR</span></div>
           <div>
-            <h3 class="pub-title">PrefixMemory-Tuning: Modernizing Prefix-Tuning by Decoupling the Prefix from Attention</h3>
-            <p class="pub-authors"><span class="me">Haonan Wang</span>, Brian K. Chen, Siquan Li, Liang Xinhe, Hwee Kuan Lee, Kenji Kawaguchi, Tianyang Hu</p>
+            <h3 class="pub-title">SeedPrints: Fingerprints Can Even Tell Which Seed Your Large Language Model Was Trained From</h3>
+            <p class="pub-authors">Yao Tong*, <span class="me">Haonan Wang*</span>, Siquan Li, Kenji Kawaguchi, Tianyang Hu</p>
             <p class="pub-venue">International Conference on Learning Representations <span class="badge">ICLR 2026</span></p>
             <div class="pub-links">
-              <a class="pub-link" href="https://openreview.net/forum?id=LvUMpZE44r" target="_blank" rel="noopener">OpenReview</a>
+              <a class="pub-link" href="https://openreview.net" target="_blank" rel="noopener">OpenReview</a>
             </div>
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-tags="first 2026">
           <div class="pub-year">2026<span class="sub">ICLR</span></div>
           <div>
             <h3 class="pub-title">Fostering Video Reasoning via Next-Event Prediction</h3>
-            <p class="pub-authors"><span class="me">Haonan Wang</span>, Hongfu Liu, Xiangyan Liu, Chao Du, Kenji Kawaguchi, Ye Wang, Tianyu Pang</p>
+            <p class="pub-authors"><span class="me">Haonan Wang*</span>, Hongfu Liu*, Xiangyan Liu, Chao Du, Kenji Kawaguchi, Ye Wang, Tianyu Pang</p>
             <p class="pub-venue">International Conference on Learning Representations <span class="badge">ICLR 2026</span></p>
             <div class="pub-links">
               <a class="pub-link" href="https://openreview.net/forum?id=8nUgzuvskm" target="_blank" rel="noopener">OpenReview</a>
@@ -611,24 +1284,38 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-tags="first 2026">
+          <div class="pub-year">2026<span class="sub">ICLR</span></div>
+          <div>
+            <h3 class="pub-title">Prefix-Tuning+: Modernizing Prefix-Tuning through Attention Independent Prefix Data</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang</span>, Brian Chen, Siquan Li, Xinhe Liang, Tianyang Hu, Hwee Kuan Lee, Kenji Kawaguchi</p>
+            <p class="pub-venue">International Conference on Learning Representations <span class="badge">ICLR 2026</span></p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://openreview.net/forum?id=LvUMpZE44r" target="_blank" rel="noopener">OpenReview</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2025 -->
+        <article class="pub" data-tags="first 2025">
           <div class="pub-year">2025<span class="sub">PREPRINT</span></div>
           <div>
             <h3 class="pub-title">From Harm to Help: Turning Reasoning In-Context Demos into Assets for Reasoning LMs</h3>
             <p class="pub-authors"><span class="me">Haonan Wang</span>, Weida Liang, Zihang Fu, Zheng Nie, Yifan Zhang, Yao Tong, Tongyao Zhu, Hao Jiang, Chuang Li, Jiaying Wu, Kenji Kawaguchi</p>
-            <p class="pub-venue">Under review <span class="badge">2025</span></p>
+            <p class="pub-venue">arXiv preprint 2509.23196 <span class="badge">2025</span></p>
             <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/abs/2509.23196" target="_blank" rel="noopener">arXiv</a>
               <a class="pub-link" href="https://openreview.net/forum?id=jCMm98woUr" target="_blank" rel="noopener">OpenReview</a>
             </div>
           </div>
         </article>
 
-        <article class="pub">
-          <div class="pub-year">2024<span class="sub">PREPRINT</span></div>
+        <article class="pub featured" data-tags="first featured 2025">
+          <div class="pub-year">2025<span class="sub">TMLR</span></div>
           <div>
             <h3 class="pub-title">When Precision Meets Position: BFloat16 Breaks Down RoPE in Long-Context Training</h3>
             <p class="pub-authors"><span class="me">Haonan Wang</span>, Qian Liu, Chao Du, Tongyao Zhu, Cunxiao Du, Kenji Kawaguchi, Tianyu Pang</p>
-            <p class="pub-venue">arXiv preprint <span class="badge">AnchorAttention</span></p>
+            <p class="pub-venue">Transactions on Machine Learning Research <span class="badge">TMLR 2025</span> <span class="badge hot">AnchorAttention</span></p>
             <div class="pub-links">
               <a class="pub-link" href="https://arxiv.org/abs/2411.13476" target="_blank" rel="noopener">arXiv</a>
               <a class="pub-link" href="https://github.com/haonan3/AnchorContext" target="_blank" rel="noopener">Code</a>
@@ -636,18 +1323,195 @@
           </div>
         </article>
 
-        <article class="pub">
+        <article class="pub" data-tags="first 2025">
+          <div class="pub-year">2025<span class="sub">NAACL</span></div>
+          <div>
+            <h3 class="pub-title">Boosting Visual-Language Models by Exploiting Hard Samples</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang*</span>, Minbin Huang*, Runhui Huang, Lanqing Hong, Hang Xu, Tianyang Hu, Xiaodan Liang, Zhenguo Li</p>
+            <p class="pub-venue">North American Chapter of the Association for Computational Linguistics <span class="badge">NAACL 2025</span></p>
+          </div>
+        </article>
+
+        <!-- 2024 -->
+        <article class="pub" data-tags="first 2024">
+          <div class="pub-year">2024<span class="sub">PREPRINT</span></div>
+          <div>
+            <h3 class="pub-title">Can AI Be as Creative as Humans?</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang</span>, James Zou, Michael Mozer, Linjun Zhang, Anirudh Goyal, Alex Lamb, Zhun Deng, Michael Qizhe Xie, Hannah Brown, Kenji Kawaguchi</p>
+            <p class="pub-venue">arXiv preprint 2401.01623 <span class="badge">2024</span></p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/abs/2401.01623" target="_blank" rel="noopener">arXiv</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub featured" data-tags="first featured 2024">
           <div class="pub-year">2024<span class="sub">ICML · Oral</span></div>
           <div>
             <h3 class="pub-title">The Stronger the Diffusion Model, the Easier the Backdoor: Data Poisoning to Induce Copyright Breaches Without Adjusting Finetuning Pipeline</h3>
             <p class="pub-authors"><span class="me">Haonan Wang</span>, Qianli Shen, Yao Tong, Yang Zhang, Kenji Kawaguchi</p>
-            <p class="pub-venue">International Conference on Machine Learning <span class="badge">ICML 2024 Oral</span></p>
+            <p class="pub-venue">International Conference on Machine Learning <span class="badge hot">ICML 2024 Oral · Top 2.37%</span></p>
             <div class="pub-links">
               <a class="pub-link" href="https://github.com/haonan3/ICML-2024-Oral-SilentBadDiffusion" target="_blank" rel="noopener">Code</a>
             </div>
           </div>
         </article>
 
+        <!-- 2023 / earlier -->
+        <article class="pub" data-tags="first 2023">
+          <div class="pub-year">2023<span class="sub">WSDM</span></div>
+          <div>
+            <h3 class="pub-title">Training Fair Deep Neural Networks by Balancing Influence</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang*</span>, Ziwei Wu*, Jingrui He</p>
+            <p class="pub-venue">ACM International Conference on Web Search and Data Mining <span class="badge">WSDM 2023</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="first 2023">
+          <div class="pub-year">2023<span class="sub">TMLR</span></div>
+          <div>
+            <h3 class="pub-title">Can Single-Pass Contrastive Learning Work for Both Homophilic and Heterophilic Graph?</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang</span>, Jieyu Zhang, Qi Zhu, Wei Huang, Kenji Kawaguchi, Xiaokui Xiao</p>
+            <p class="pub-venue">Transactions on Machine Learning Research <span class="badge">TMLR 2023</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="first 2023">
+          <div class="pub-year">2022<span class="sub">NeurIPS</span></div>
+          <div>
+            <h3 class="pub-title">Deep Active Learning by Leveraging Training Dynamics</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang</span>, Wei Huang, Andrew Margenot, Hanghang Tong, Jingrui He</p>
+            <p class="pub-venue">Conference on Neural Information Processing Systems <span class="badge">NeurIPS 2022</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="first 2023">
+          <div class="pub-year">2022<span class="sub">NeurIPS</span></div>
+          <div>
+            <h3 class="pub-title">Understanding Programmatic Weak Supervision via Source-Aware Influence Function</h3>
+            <p class="pub-authors">Jieyu Zhang*, <span class="me">Haonan Wang*</span>, Cheng-Yu Hsieh, Alexander Ratner</p>
+            <p class="pub-venue">Conference on Neural Information Processing Systems <span class="badge">NeurIPS 2022</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="first 2023">
+          <div class="pub-year">2021<span class="sub">WWW</span></div>
+          <div>
+            <h3 class="pub-title">Controllable Gradient Item Retrieval</h3>
+            <p class="pub-authors"><span class="me">Haonan Wang</span>, Chang Zhou, Hongxia Yang, Carl Yang, Jingrui He</p>
+            <p class="pub-venue">International World Wide Web Conference <span class="badge">WWW 2021</span></p>
+          </div>
+        </article>
+
+        <!-- Co-author highlights -->
+        <article class="pub featured" data-tags="featured 2023">
+          <div class="pub-year">2022<span class="sub">NeurIPS</span></div>
+          <div>
+            <h3 class="pub-title">A Neural Corpus Indexer for Document Retrieval</h3>
+            <p class="pub-authors"><span class="co">Yujing Wang, Yingyan Hou, <span class="me">Haonan Wang</span>, Ziming Miao, Shibin Wu, Hao Sun, … Mao Yang</span></p>
+            <p class="pub-venue">Conference on Neural Information Processing Systems <span class="badge hot">NeurIPS 2022 Best Paper · Top 7/3391</span></p>
+          </div>
+        </article>
+
+        <article class="pub featured" data-tags="featured 2023">
+          <div class="pub-year">2023<span class="sub">NeurIPS · Spotlight</span></div>
+          <div>
+            <h3 class="pub-title">Complexity Matters: Rethinking the Latent Space for Generative Modeling</h3>
+            <p class="pub-authors"><span class="co">Tianyang Hu, Fei Chen, <span class="me">Haonan Wang</span>, Jiawei Li, Wenjia Wang, Jiacheng Sun, Zhenguo Li</span></p>
+            <p class="pub-venue">Conference on Neural Information Processing Systems <span class="badge hot">NeurIPS 2023 Spotlight · Top 3.06%</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="2025">
+          <div class="pub-year">2025<span class="sub">NeurIPS</span></div>
+          <div>
+            <h3 class="pub-title">SkyLadder: Better and Faster Pretraining via Context Window Scheduling</h3>
+            <p class="pub-authors"><span class="co">Tongyao Zhu, Qian Liu, <span class="me">Haonan Wang</span>, Shiqi Chen, Xiangming Gu, Tianyu Pang, Min-Yen Kan</span></p>
+            <p class="pub-venue">Conference on Neural Information Processing Systems <span class="badge">NeurIPS 2025</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="2025">
+          <div class="pub-year">2025<span class="sub">NeurIPS</span></div>
+          <div>
+            <h3 class="pub-title">NoisyRollout: Reinforcing Visual Reasoning with Data Augmentation</h3>
+            <p class="pub-authors"><span class="co">Xiangyan Liu, Jinjie Ni, Zijian Wu, Chao Du, Longxu Dou, <span class="me">Haonan Wang</span>, Tianyu Pang, Michael Qizhe Shieh</span></p>
+            <p class="pub-venue">Conference on Neural Information Processing Systems <span class="badge">NeurIPS 2025</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="2026">
+          <div class="pub-year">2026<span class="sub">ICLR</span></div>
+          <div>
+            <h3 class="pub-title">Reinforcing General Reasoning without Verifiers</h3>
+            <p class="pub-authors"><span class="co">Xiangxin Zhou, Zichen Liu, Anya Sims, <span class="me">Haonan Wang</span>, Tianyu Pang, Chongxuan Li, Liang Wang, Min Lin, Chao Du</span></p>
+            <p class="pub-venue">International Conference on Learning Representations <span class="badge">ICLR 2026</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="2026">
+          <div class="pub-year">2026<span class="sub">WACV</span></div>
+          <div>
+            <h3 class="pub-title">CONCORD: Concept-Informed Diffusion for Dataset Distillation</h3>
+            <p class="pub-authors"><span class="co">Jianyang Gu, <span class="me">Haonan Wang</span>, Ruoxi Jia, Saeed Vahidian, Vyacheslav Kungurtsev, Wei Jiang, Yiran Chen</span></p>
+            <p class="pub-venue">Winter Conference on Applications of Computer Vision <span class="badge">WACV 2026</span></p>
+          </div>
+        </article>
+
+        <article class="pub" data-tags="2024">
+          <div class="pub-year">2024<span class="sub">CVPR</span></div>
+          <div>
+            <h3 class="pub-title">Efficient Dataset Distillation via Minimax Diffusion</h3>
+            <p class="pub-authors"><span class="co">Jianyang Gu, Saeed Vahidian, Vyacheslav Kungurtsev, <span class="me">Haonan Wang</span>, Wei Jiang, Yang You, Yiran Chen</span></p>
+            <p class="pub-venue">Conference on Computer Vision and Pattern Recognition <span class="badge">CVPR 2024</span></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       AWARDS
+       ========================================================= -->
+  <section id="awards">
+    <div class="container scroll-reveal">
+      <div class="section-head">
+        <span class="marker"></span>
+        <h2>Awards &amp; Honors</h2>
+        <span class="meta">// recognition</span>
+      </div>
+      <div class="awards">
+        <div class="award">
+          <span class="icon"><i class="fa-solid fa-medal"></i></span>
+          <div class="when">May 2026</div>
+          <div class="what"><span class="em">ICML 2026</span> Gold Reviewer</div>
+        </div>
+        <div class="award">
+          <span class="icon"><i class="fa-solid fa-award"></i></span>
+          <div class="when">Aug 2024</div>
+          <div class="what">Research Achievement Award · <span class="em">NUS</span></div>
+        </div>
+        <div class="award">
+          <span class="icon"><i class="fa-solid fa-microphone"></i></span>
+          <div class="when">Jun 2024</div>
+          <div class="what"><span class="em">ICML 2024</span> Oral Paper · Top 2.37%</div>
+        </div>
+        <div class="award">
+          <span class="icon"><i class="fa-solid fa-star"></i></span>
+          <div class="when">Dec 2023</div>
+          <div class="what"><span class="em">NeurIPS 2023</span> Spotlight Paper · Top 3.06%</div>
+        </div>
+        <div class="award">
+          <span class="icon"><i class="fa-solid fa-trophy"></i></span>
+          <div class="when">Dec 2022</div>
+          <div class="what"><span class="em">NeurIPS 2022</span> Best Paper Award · Top 7/3391</div>
+        </div>
+        <div class="award">
+          <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <div class="when">Apr 2020</div>
+          <div class="what">C.W. Gear Outstanding Undergraduate · <span class="em">UIUC</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -656,56 +1520,74 @@
        EXPERIENCE
        ========================================================= -->
   <section id="experience">
-    <div class="container">
+    <div class="container scroll-reveal">
       <div class="section-head">
         <span class="marker"></span>
         <h2>Experience</h2>
-        <span class="meta">/ where I’ve been</span>
+        <span class="meta">// where I've been</span>
       </div>
       <ul class="exp-list">
 
         <li class="exp-item">
-          <span class="exp-date">2023 – Present</span>
+          <span class="exp-date">2023 — Present</span>
           <div>
-            <p class="exp-role">PhD Student</p>
+            <p class="exp-role">PhD Candidate, Computer Science</p>
             <p class="exp-org">National University of Singapore<span class="dot">•</span>School of Computing</p>
-            <p class="exp-detail">Advised by Prof. Kenji Kawaguchi.</p>
+            <p class="exp-detail">Advised by <a href="https://scholar.google.com/citations?user=aLl3rYoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Kenji Kawaguchi</a>.</p>
           </div>
         </li>
 
         <li class="exp-item">
-          <span class="exp-date">2024 – Present</span>
+          <span class="exp-date">Aug 2025 — Dec 2025</span>
           <div>
-            <p class="exp-role">Research Collaborator</p>
-            <p class="exp-org">MiroMind AI<span class="dot">•</span>Singapore</p>
-            <p class="exp-detail">Working on agents (web &amp; mobile) and LLM training/inference infrastructure.</p>
+            <p class="exp-role">Research Intern</p>
+            <p class="exp-org">MiroMind AI Lab<span class="dot">•</span>Singapore</p>
+            <p class="exp-detail">Supervisor: <a href="https://scholar.google.com/citations?user=zuYIUJEAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Yifan Zhang</a>. Building <em>MiroThinker</em>, an open-source deep-research agent.</p>
           </div>
         </li>
 
         <li class="exp-item">
-          <span class="exp-date">2024</span>
+          <span class="exp-date">Jun 2024 — May 2025</span>
           <div>
             <p class="exp-role">Research Intern</p>
             <p class="exp-org">Sea AI Lab<span class="dot">•</span>Singapore</p>
-            <p class="exp-detail">Long-context LLM training; led the AnchorAttention project.</p>
+            <p class="exp-detail">Supervisors: <a href="https://scholar.google.com/citations?user=wYDbtFsAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Tianyu Pang</a>, <a href="https://scholar.google.com/citations?user=QOp7xW0AAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Chao Du</a>. Long-context LLM training; led the AnchorAttention project.</p>
           </div>
         </li>
 
         <li class="exp-item">
-          <span class="exp-date">2020 – 2021</span>
+          <span class="exp-date">Feb 2022 — May 2022</span>
           <div>
-            <p class="exp-role">PhD Student</p>
-            <p class="exp-org">University of Illinois Urbana-Champaign<span class="dot">•</span>UIUC</p>
-            <p class="exp-detail">Mentored by Prof. Jingrui He and Prof. Hanghang Tong.</p>
+            <p class="exp-role">Research Intern</p>
+            <p class="exp-org">Microsoft Research Asia<span class="dot">•</span>Beijing</p>
+            <p class="exp-detail">Supervisor: <a href="https://scholar.google.com/citations?user=YgL4rywAAAAJ&amp;hl=en" target="_blank" rel="noopener">Yujing Wang</a>. Neural retrieval and corpus indexing.</p>
           </div>
         </li>
 
         <li class="exp-item">
-          <span class="exp-date">2017 – 2020</span>
+          <span class="exp-date">2020 — 2021</span>
+          <div>
+            <p class="exp-role">PhD Student, Computer Science</p>
+            <p class="exp-org">University of Illinois Urbana-Champaign<span class="dot">•</span>UIUC</p>
+            <p class="exp-detail">Advised by <a href="https://scholar.google.com/citations?user=hXpZynkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jingrui He</a>.</p>
+          </div>
+        </li>
+
+        <li class="exp-item">
+          <span class="exp-date">Jun 2020 — Sep 2020</span>
+          <div>
+            <p class="exp-role">Research Intern</p>
+            <p class="exp-org">Alibaba Group<span class="dot">•</span>Beijing</p>
+            <p class="exp-detail">Supervisors: <a href="https://scholar.google.com/citations?user=QeSoG3sAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Chang Zhou</a>, <a href="https://scholar.google.com/citations?user=iJlC5mMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Hongxia Yang</a>. Item retrieval and recommendation.</p>
+          </div>
+        </li>
+
+        <li class="exp-item">
+          <span class="exp-date">2017 — 2020</span>
           <div>
             <p class="exp-role">B.S. in Computer Science &amp; Statistics</p>
             <p class="exp-org">University of Illinois Urbana-Champaign<span class="dot">•</span>UIUC</p>
-            <p class="exp-detail">Undergraduate research with Prof. Jiawei Han.</p>
+            <p class="exp-detail">GPA 3.86/4.00. Undergraduate research with <a href="https://scholar.google.com/citations?user=Kv9AbjMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jiawei Han</a>.</p>
           </div>
         </li>
       </ul>
@@ -713,23 +1595,56 @@
   </section>
 
   <!-- =========================================================
+       TEACHING
+       ========================================================= -->
+  <section id="teaching">
+    <div class="container scroll-reveal">
+      <div class="section-head">
+        <span class="marker"></span>
+        <h2>Teaching</h2>
+        <span class="meta">// TA experience</span>
+      </div>
+      <div class="teaching">
+        <div class="course">
+          <span class="code">NUS · CS5339</span>
+          <p class="title">Theory &amp; Algorithms for Machine Learning</p>
+          <p class="when">Jan 2025 — May 2025</p>
+        </div>
+        <div class="course">
+          <span class="code">UIUC · IS 577</span>
+          <p class="title">Data Mining</p>
+          <p class="when">Aug 2021 — Dec 2021</p>
+        </div>
+        <div class="course">
+          <span class="code">UIUC · ECE 490</span>
+          <p class="title">Introduction to Optimization</p>
+          <p class="when">Jan 2020 — May 2020</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
        SERVICE
        ========================================================= -->
   <section id="service">
-    <div class="container">
+    <div class="container scroll-reveal">
       <div class="section-head">
         <span class="marker"></span>
         <h2>Service</h2>
-        <span class="meta">/ reviewing</span>
+        <span class="meta">// reviewing</span>
       </div>
       <ul class="service-list">
+        <li class="gold">ICML Gold Reviewer 2026</li>
         <li>NeurIPS</li>
         <li>ICLR</li>
         <li>ICML</li>
-        <li>CVPR</li>
-        <li>ACL</li>
+        <li>KDD</li>
+        <li>AISTATS</li>
+        <li>TPAMI</li>
+        <li>TMLR</li>
       </ul>
-      <p class="service-note">Reviewer for top-tier ML and NLP venues.</p>
+      <p class="service-note">Conference &amp; journal reviewer for top-tier ML and NLP venues.</p>
     </div>
   </section>
 
@@ -739,7 +1654,7 @@
   <footer>
     <div class="container">
       <p>
-        © <span id="year"></span> Haonan Wang ·
+        © <span id="year"></span> Haonan Wang · 王淏楠 ·
         Built with <span class="heart">●</span> in Singapore ·
         <a href="https://github.com/haonan3/haonan3.github.io" target="_blank" rel="noopener">Source</a>
       </p>
@@ -747,7 +1662,65 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (persisted)
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') root.setAttribute('data-theme', 'dark');
+    themeToggle.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // Publication filters
+    const filters = document.querySelectorAll('.pub-filter');
+    const pubs = document.querySelectorAll('.pub');
+
+    // Update counts
+    const countOf = (tag) => Array.from(pubs).filter(p => {
+      if (tag === 'all') return true;
+      return (p.dataset.tags || '').split(/\s+/).includes(tag);
+    }).length;
+    ['all','first','featured','2026','2025','2024','2023'].forEach(t => {
+      const el = document.getElementById('cnt-' + t);
+      if (el) el.textContent = '· ' + countOf(t);
+    });
+
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tag = btn.dataset.filter;
+        pubs.forEach(p => {
+          if (tag === 'all') p.classList.remove('hidden');
+          else {
+            const tags = (p.dataset.tags || '').split(/\s+/);
+            p.classList.toggle('hidden', !tags.includes(tag));
+          }
+        });
+      });
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.scroll-reveal').forEach(el => io.observe(el));
   </script>
 </body>
 </html>
