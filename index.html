@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Haonan Wang · 王淏楠</title>
-  <meta name="description" content="Haonan Wang (王淏楠) — PhD candidate at NUS School of Computing, working on LLM reasoning, agents, and generative AI." />
+  <meta name="description" content="Haonan Wang (王淏楠) — Principal Research Scientist at Tencent Hunyuan, working on RL for agentic multimodal generation, LLM reasoning, and autonomous agents." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Haonan Wang · 王淏楠" />
-  <meta property="og:description" content="PhD candidate at NUS School of Computing — LLM reasoning, agents, generative AI." />
+  <meta property="og:description" content="Principal Research Scientist at Tencent Hunyuan — RL for agentic multimodal generation, LLM reasoning, agents." />
   <meta property="og:type" content="website" />
 
   <!-- Favicon: animated gradient dot -->
@@ -588,6 +588,22 @@
       letter-spacing: -0.005em;
       color: var(--ink);
     }
+    .milestone-title a { color: inherit; text-decoration: none; transition: color .15s ease; }
+    .milestone-title a:hover { color: var(--accent-deep); }
+    /* Whole-card link variant */
+    a.milestone { text-decoration: none; color: inherit; }
+    a.milestone:hover { color: inherit; }
+    .milestone-ext {
+      font-size: 10.5px;
+      margin-left: 6px;
+      color: var(--muted);
+      vertical-align: 2px;
+      transition: color .18s ease, transform .18s ease;
+    }
+    a.milestone:hover .milestone-ext {
+      color: var(--accent-deep);
+      transform: translate(2px, -2px);
+    }
     .milestone-desc {
       font-size: 12px;
       color: var(--ink-3);
@@ -1116,23 +1132,28 @@
           <span class="name-cjk">王淏楠<span class="pinyin">/ Hàonán Wáng /</span></span>
         </div>
         <p class="role">
-          <span class="badge">PhD Candidate</span>
-          <span><span class="school">NUS School of Computing</span> · Singapore</span>
+          <span class="badge">Principal Research Scientist</span>
+          <span><span class="school">Tencent Hunyuan</span>@Singapore</span>
         </p>
         <p class="bio">
-          I am a PhD candidate at the <strong>National University of Singapore</strong>,
+          I am a <strong>Principal Research Scientist</strong> at
+          <a href="https://hunyuan.tencent.com/" target="_blank" rel="noopener">Tencent Hunyuan</a>,
+          where I work on <strong>reinforcement learning (RL) for multimodal generation</strong> (video, image, text, etc.)
+          and lead <a href="https://github.com/Tencent-Hunyuan/UniRL" target="_blank" rel="noopener"><strong>UniRL</strong></a>,
+          our open-source RL framework for post-training foundation models toward <strong>agentic multimodal generation</strong>.
+        </p>
+        <p class="bio">
+          Concurrently, I am completing my PhD at the <strong>National University of Singapore</strong>,
           advised by <a href="https://scholar.google.com/citations?user=aLl3rYoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Kenji Kawaguchi</a>.
-          I previously did a PhD at <strong>UIUC</strong> with <a href="https://scholar.google.com/citations?user=hXpZynkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jingrui He</a>,
-          and received my B.S. in CS &amp; Statistics from UIUC, where I was mentored by
+          Previously a PhD student at <strong>UIUC</strong> with
+          <a href="https://scholar.google.com/citations?user=hXpZynkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jingrui He</a>,
+          and B.S. in CS &amp; Statistics at UIUC mentored by
           <a href="https://scholar.google.com/citations?user=Kv9AbjMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Jiawei Han</a>.
         </p>
         <p class="bio">
           My research builds systems that <strong>reason, plan, and learn from interaction</strong> —
-          spanning long-context modeling, world models, LLM reasoning, and autonomous agents.
-          I am currently focused on RL and infrastructure for <strong>unified models</strong>,
-          in close collaboration with
-          <a href="https://miromind.ai/" target="_blank" rel="noopener">MiroMind&nbsp;AI</a>
-          and <a href="https://sail.sea.com/" target="_blank" rel="noopener">Sea AI Lab</a>.
+          spanning long-context training, world models, LLM reasoning, autonomous agents,
+          and reinforcement learning for unified multimodal generation.
         </p>
         <p class="bio muted">
           Feel free to reach out if you'd like to chat about research or collaborate.
@@ -1154,7 +1175,7 @@
       <div class="trajectory reveal d3">
         <div class="trajectory-header">
           <span class="label"><span class="dot"></span>Research Arc</span>
-          <span class="meta">// retrieval → long context → world models → reasoning → agents → unified</span>
+          <span class="meta">// retrieval → long context → world models → reasoning → agents → agentic multimodal generation</span>
         </div>
         <div class="trajectory-rail">
 
@@ -1209,16 +1230,16 @@
             <div class="milestone-tag">Open source · MiroMind</div>
           </article>
 
-          <article class="milestone now">
-            <span class="milestone-area">Unified Models</span>
+          <a class="milestone now" href="https://github.com/Tencent-Hunyuan/UniRL" target="_blank" rel="noopener" aria-label="UniRL on GitHub — opens in a new tab">
+            <span class="milestone-area">Agentic Generation</span>
             <div class="milestone-head">
               <span class="milestone-year">Now</span>
               <span class="milestone-pulse"></span>
             </div>
-            <h3 class="milestone-title">Unified Model RL</h3>
-            <p class="milestone-desc">Reinforcement learning and training infrastructure for unified multimodal models.</p>
-            <div class="milestone-tag">Current focus</div>
-          </article>
+            <h3 class="milestone-title">UniRL <i class="fa-solid fa-arrow-up-right-from-square milestone-ext" aria-hidden="true"></i></h3>
+            <p class="milestone-desc">Open-source RL framework for post-training foundation models toward agentic multimodal generation.</p>
+            <div class="milestone-tag">Project lead · Tencent Hunyuan</div>
+          </a>
 
         </div>
       </div>
@@ -1237,19 +1258,19 @@
       </div>
       <div class="interests">
         <div class="interest">
-          <span class="tag">01 / Reasoning</span>
+          <span class="tag">01 / Generation</span>
+          <h3>Agentic Multimodal Generation</h3>
+          <p>Post-training foundation models with RL — toward agentic multimodal generation across modalities.</p>
+        </div>
+        <div class="interest">
+          <span class="tag">02 / Reasoning</span>
           <h3>LLM Reasoning</h3>
           <p>Improving how language models reason — through training, decoding, and inference-time aggregation.</p>
         </div>
         <div class="interest">
-          <span class="tag">02 / Agents</span>
+          <span class="tag">03 / Agents</span>
           <h3>Autonomous Agents</h3>
           <p>Building agents that learn from interaction across web, mobile, and tool-use environments.</p>
-        </div>
-        <div class="interest">
-          <span class="tag">03 / Generation</span>
-          <h3>Generative Models</h3>
-          <p>Diffusion and multimodal generation — capability, controllability, and copyright safety.</p>
         </div>
         <div class="interest">
           <span class="tag">04 / Data</span>
@@ -1274,6 +1295,10 @@
         <li class="news-item">
           <span class="news-date">May 2026</span>
           <p class="news-text"><span class="new-tag">NEW</span>Recognized as an <strong>ICML 2026 Gold Reviewer</strong>.</p>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Mar 2026</span>
+          <p class="news-text"><span class="new-tag">NEW</span>Joined <strong>Tencent Hunyuan</strong> as <strong>Principal Research Scientist</strong>; leading RL for <strong>agentic multimodal generation</strong> and the open-source <a href="https://github.com/Tencent-Hunyuan/UniRL" target="_blank" rel="noopener"><em>UniRL</em></a> framework.</p>
         </li>
         <li class="news-item">
           <span class="news-date">Oct 2025</span>
@@ -1607,6 +1632,15 @@
         <span class="meta">// where I've been</span>
       </div>
       <ul class="exp-list">
+
+        <li class="exp-item">
+          <span class="exp-date">Mar 2026 — Present</span>
+          <div>
+            <p class="exp-role">Principal Research Scientist</p>
+            <p class="exp-org">Tencent Hunyuan@Singapore</p>
+            <p class="exp-detail">Leading RL post-training for agentic multimodal generation. Project lead on <a href="https://github.com/Tencent-Hunyuan/UniRL" target="_blank" rel="noopener">UniRL</a>, our open-source training framework.</p>
+          </div>
+        </li>
 
         <li class="exp-item">
           <span class="exp-date">2023 — Present</span>
